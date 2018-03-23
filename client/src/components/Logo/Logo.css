@@ -1,0 +1,18 @@
+.navlogo {
+  max-width: 20%;
+  max-height: 20%;
+  text-align: left;
+}
+
+.lil_logo{
+	max-width: 790px;
+	margin: 0 auto;
+	margin-top: 100px;
+	margin-bottom: 3px;
+}
+
+@media (min-width: 769px){
+	.container {
+		margin: 0.5rem auto;
+	}
+}

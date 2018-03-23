@@ -1,0 +1,29 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "history": "^4.7.2",
+    "material-ui": "^0.20.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-addons-update": "^15.6.2",
+    "react-dom": "^16.2.0",
+    "react-icons": "^2.2.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0",
+    "react-tap-event-plugin": "^3.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:5000",
+  "author": "Project-R",
+  "license": "ISC"
+}

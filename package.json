@@ -1,0 +1,25 @@
+{
+  "name": "projectllama",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "engines": {
+    "node": "9.0.0"
+  },
+  "dependencies": {
+    "concurrently": "^3.1.0",
+    "rimraf": "^2.5.4"
+  },
+  "scripts": {
+    "client-build": "cd client && yarn build",
+    "build": "cd client && yarn build",
+    "build-test": "concurrently \"cd server && yarn build\" \"yarn client-build\"",
+    "clean": "concurrently \"rimraf node_modules\" \"cd client && rimraf node_modules build\" \"cd server && rimraf node_modules build\"",
+    "heroku-postbuild": "yarn build",
+    "install": "(cd client && yarn) && (cd server && yarn)",
+    "start": "concurrently \"cd client && yarn start\" \"cd server && yarn start\"",
+    "start:prod": "cd server && yarn start:prod",
+    "dev": "concurrently \"cd client && yarn start\" \"cd server && nodemon start\""
+  }
+}

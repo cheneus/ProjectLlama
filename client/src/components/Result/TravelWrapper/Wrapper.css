@@ -1,0 +1,65 @@
+#results {
+  width: 100%;
+}
+
+.wrapper {
+  margin: 10px auto 10px auto;
+  background: #5c9294;
+  width: 80%;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.locationPhoto img {
+  width: 100%;
+}
+
+.wrapper h5 {
+  margin: 20px auto;
+  color: white;
+  font-size: 50px;
+  font-family: 'Acme', sans-serif;
+  text-shadow: 3px 3px 4px rgba(255,84,81, .8);
+}
+
+.wrapper-button {
+  margin: 20px auto;
+  width: 200px;
+  height: 75px;
+  display: flex;
+}
+
+.wrapper-button h3 {
+  margin: auto;
+  font-size: 40px;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+.resultPhoto {
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 3px; 
+}
+
+.fa {
+  font-size:70px;
+  color:#5c9294;
+  display: block;
+  margin: 5px auto;
+}
+
+.fa:hover{
+  color: black;
+}
+
+.chevron:hover{
+  text-decoration: none;
+}
+
+#results {
+  text-align: center;
+}
