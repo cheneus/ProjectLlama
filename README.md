@@ -1,6 +1,8 @@
 # ProjectLlama
 
-This a project fork from my group project along with my own improvement and vision. 
+The initial project done by my group on https://github.com/cheneus/ProjectRed
+Since then, I have implemented my own improvement and changes to make the site better.
+You can see the live version here : https://projectllama.herokuapp.com/
 
 ## Getting Started
 
@@ -40,16 +42,6 @@ Tesing is still waiting for it to be done.
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
 ```
 Give an example
 ```
@@ -60,13 +52,15 @@ This app is built to be deployed into heroku, all configuration is setup to dete
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* NodeJS
+* MongoDB
+* React
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Chen Sia** 
+* **Addison, Nicole** -- initial front-end
+* **Yaeinn** -- design of logo & Llamas
 
 
 ## License
