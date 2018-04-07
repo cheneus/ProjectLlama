@@ -15,7 +15,6 @@ import {
 import PrivateRoute from './modules/protected';
 import Home from './containers/Home';
 import LoginPage from './containers/LoginPage';
-import SignUpPage from './containers/SignUpPage';
 import RegisterPage from './containers/RegisterPage';
 import DashboardPage from './containers/Dashboard';
 // import Login from './components/Login';

@@ -16,12 +16,12 @@ const config = {
   },
   production: {
     //url to be used in link generation
-    url: 'https://scrap-6647.herokuapp.com/',
+    url: '',
     //mongodb connection settings
     database: {
-      host: 'ds225078.mlab.com',
-      port: '25078',
-      db: 'heroku_jhbhrwf2'
+      host: '',
+      port: '',
+      db: ''
     },
     //server details
     server: {

@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { Card } from 'material-ui/Card';
 import LoginForm from '../components/LoginForm';
 import Dashboard from '../containers/Dashboard';
-import Auth from '../modules/Auth';
+import Auth from '../modules/auth';
 import axios from 'axios';
 
 class LoginPage extends React.Component {

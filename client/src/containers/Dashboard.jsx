@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import Auth from '../modules/Auth';
+import Auth from '../modules/auth';
 import { Link, Redirect } from 'react-router-dom';
 import Profile from '../components/Profile';
 import { Card } from 'material-ui/Card';
 
 class DashboardPage extends Component {
-  /**
-   * Class constructor.
-   */
     state = {
       secretData: '',
       userData: {},

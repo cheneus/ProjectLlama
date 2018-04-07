@@ -5,14 +5,9 @@ import React, {Component} from "react";
 // import FlatButton from "material-ui/FlatButton";
 // import ToolbarGroup from "material-ui/Toolbar/ToolbarGroup";
 import { Link, Redirect } from "react-router-dom";
-import Auth from "../../../modules/Auth";
+import Auth from "../../../modules/auth";
 import "./navbar.css";
-// Another stateless, functional component, MyAppBar.
-// Here we are setting the iconElementRight property of Material UI's AppBar
-// to the component defined above.
-// const NavBar = () => (
- 
-// );
+
 
 class NavBar extends Component {
   state = {

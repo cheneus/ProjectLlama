@@ -6,7 +6,7 @@ import {
   Redirect,
   withRouter,
 } from 'react-router-dom';
-import Auth from '../modules/Auth';
+import Auth from '../modules/auth';
 
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
