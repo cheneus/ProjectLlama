@@ -21,11 +21,18 @@ const Profile = props => (
          </div>
         </div>
         <button
-          className="btn"
+          className="btn btn-warning"
+          onClick={props.onLogOut.bind(this)}
+        >
+            Change Password
+        </button>
+        <button
+          className="btn btn-danger"
           onClick={props.onLogOut.bind(this)}
         >
             Log Out
         </button>
+      
       </div>
     </div>
   </div>

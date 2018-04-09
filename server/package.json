@@ -44,7 +44,7 @@
   },
   "scripts": {
     "build": "babel . --ignore node_modules,build --out-dir build",
-    "start": "nodemon  server.js",
+    "start": "node server.js",
     "start:prod": "node server.js",
     "client": "cd client && yarn start",
     "server": "node server.js",

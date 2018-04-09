@@ -27,7 +27,7 @@ function Quiz(props) {
       </ul>
       <div className="buttons">
         <button
-          className="btn"
+          className="btn btn-modi"
           type="submit"
           disabled={props.questionId === 1}
           onClick={props.onBackPressed}
@@ -35,7 +35,7 @@ function Quiz(props) {
           Previous
         </button>
         <button
-          className="btn"
+          className="btn btn-modi"
           type="submit"
           disabled={!props.answer}
           onClick={props.onNextPressed}

@@ -12,7 +12,6 @@ class DashboardPage extends Component {
       token: '',
       message: '',
     };
-  
 
     getProfile = () => {
       const token = Auth.getToken();
@@ -23,16 +22,11 @@ class DashboardPage extends Component {
         },
         token,
       };
-      console.log(this.state.userData);
       axios.get('/profile/', config)
         .then((res, req) => {
-          console.log("res.data")
-          console.log(res.data);
           this.setState({ userData: res.data.user });
         })
         .catch(err => {
-          console.log(err)
-          console.log(err.message)
           this.setState({token: ''})
         });
     }
@@ -46,21 +40,6 @@ class DashboardPage extends Component {
 
   componentWillMount() {
     this.setState({ token: localStorage.getItem('token') });
-    // const token = Auth.getToken();
-    // const config = {
-    //   headers: {
-    //     Authorization: `bearer ${Auth.getToken()}`,
-    //     'x-access-token': Auth.getToken(),
-    //   },
-    //   token,
-    // };
-    // console.log(this.state.userData);
-    // axios.get('/profile', config)
-    //   .then((res, req) => {
-    //     console.log(res);
-    //     this.setState({ userData: res.data.user });
-    //   })
-    //   .catch(err => console.log(err));
   }
   /**
    * This method will be executed after initial rendering.

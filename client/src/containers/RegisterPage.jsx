@@ -68,14 +68,13 @@ class RegisterPage extends Component {
 
   registerUser = event => {
     event.preventDefault();
-    console.log("working");
+
     const name = this.state.name;
     const email = this.state.email;
     const password = this.state.password;
     axios
       .post("/auth/signup", { name, email, password })
       .then(res => {
-        console.log(res.data);
         this.setState({ message: res.data });
         localStorage.setItem("successMessage", res.data.message);
         if (res.data.success === true) {
@@ -83,7 +82,7 @@ class RegisterPage extends Component {
         }
       })
       .catch(err => {
-        console.log(err.response);
+
         this.setState({ message: err.response.data.message });
       });
   };

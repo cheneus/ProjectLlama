@@ -2,10 +2,6 @@ import React from "react";
 import axios from "axios";
 
 const Auth = {
-  // authenticateUser: (token) => {
-  //   console.log(token);
-  //   localStorage.setItem('token', token);
-  // },
   getToken: () => localStorage.getItem("token"),
   isUserAuthenticated: () => localStorage.getItem("token") === null,
   deauthenticateUser: () => {
@@ -25,13 +21,9 @@ const Auth = {
     axios
       .post("/profile/changepass", config)
       .then((res, req) => {
-        console.log("res.data");
-        console.log(res.data);
         this.setState({ userData: res.data.user });
       })
       .catch(err => {
-        console.log(err);
-        console.log(err.message);
         this.setState({ token: "" });
       });
   }

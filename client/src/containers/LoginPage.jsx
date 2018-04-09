@@ -48,21 +48,19 @@ class LoginPage extends React.Component {
     const email = encodeURIComponent(this.state.user.email);
     const password = encodeURIComponent(this.state.user.password);
     const formData = `email=${email}&password=${password}`;
-    console.log('=========');
-    console.log(formData);
-    console.log('=========');
+  
     // create an AJAX request
-    axios.post('/auth/login', formData,
-    ).then((res) => {
-      console.log(typeof res.data.token);
+    axios.post('/auth/login', formData)
+    .then((res) => {
+    
       const user = JSON.stringify(res.data.user);
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('usrname', user);
-      console.log(localStorage);
+    
       this.setState({ token: res.data.token });
       this.setState({redirect: true})
     }).catch((err) => {
-      console.log(err.response);
+     
       localStorage.clear()
       this.setState({errors: err.response.data})
     });

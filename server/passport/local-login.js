@@ -26,10 +26,10 @@ const strategy = new LocalStrategy({
     if (err) { return done(err); }
 
     if (!user) {
-      const error = new Error('Incorrect email or password');
-      error.name = 'IncorrectCredentialsError';
+      const err = new Error('Incorrect email or password');
+      err.name = 'IncorrectCredentialsError';
 
-      return done(error);
+      return done(err);
     }
     // if (!user.checkPassword(password)) {
     //   return done(null, false, { message: 'Incorrect password' })
