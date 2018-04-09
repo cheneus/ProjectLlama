@@ -13,6 +13,27 @@ class DashboardPage extends Component {
       message: '',
     };
   
+    changePass = () => {
+      const token = Auth.getToken();
+      const config = {
+        headers: {
+          Authorization: `bearer ${Auth.getToken()}`,
+          'x-access-token': Auth.getToken(),
+        },
+        token
+      }
+      axios.post("/profile/changepass", config)
+        .then((res, req) => {
+          console.log("res.data");
+          console.log(res.data);
+          this.setState({ userData: res.data.user });
+        })
+        .catch(err => {
+          console.log(err);
+          console.log(err.message);
+          this.setState({ token: "" });
+        });
+    }
 
     getProfile = () => {
       const token = Auth.getToken();
@@ -78,7 +99,7 @@ class DashboardPage extends Component {
         {this.state.token === '' ? (
           <Redirect to="/login" />
     ) : (
-      <Profile userData={this.state.userData} onLogOut={this.deAuth} />
+      <Profile userData={this.state.userData} onLogOut={this.deAuth} changePass={this.changePass}/>
     )}
       </div>
 
