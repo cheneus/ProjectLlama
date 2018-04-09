@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   Route,
-  BrowserRouter as Router,
-  Link,
   Redirect,
-  withRouter,
 } from 'react-router-dom';
-import Auth from '../modules/auth';
 
 
 const PrivateRoute = ({ component: Component, ...rest }) => (

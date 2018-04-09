@@ -11,7 +11,13 @@ class DashboardPage extends Component {
       userData: {},
       token: '',
       message: '',
+      chgPassState:false
     };
+
+    showChgPass = () => {
+      this.setState({chgPassState: !this.state.chgPassState})
+      console.log(this.state.chgPassState)
+    }
   
     changePass = () => {
       const token = Auth.getToken();
@@ -99,7 +105,7 @@ class DashboardPage extends Component {
         {this.state.token === '' ? (
           <Redirect to="/login" />
     ) : (
-      <Profile userData={this.state.userData} onLogOut={this.deAuth} changePass={this.changePass}/>
+      <Profile userData={this.state.userData} onLogOut={this.deAuth} onChangePass={this.showChgPass} />
     )}
       </div>
 

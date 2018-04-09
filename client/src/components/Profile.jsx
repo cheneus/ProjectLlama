@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import RaisedButton from "material-ui/RaisedButton";
+import TextField from "material-ui/TextField";
 import { Card, CardTitle, CardText } from "material-ui/Card";
 
 const Profile = props => (
@@ -22,10 +24,60 @@ const Profile = props => (
             <label className="col-8">{props.userData.email}</label>
           </div>
         </div>
+        {/* change pass state card */}
+        {props.chgPassState ? 
+       (
+        <div className="card" style={{ padding: "10px" }}>
+          {/* <h3 className="card-header"> Welcome back to TraveLlama </h3> */}
+          <div className="card-block">
+            <h2 className="card-header">Login</h2>
+            <form
+              action="/"
+              className="form-control"
+              //  onSubmit={onSubmit}
+            >
+              <div className="field-line">
+                <TextField
+                  floatingLabelText="Email"
+                  name="email"
+                  // errorText={errors.email}
+                  // onChange={onChange}
+                  // value={user.email}
+                />
+              </div>
+
+              <div className="field-line">
+                <TextField
+                  floatingLabelText="Password"
+                  type="password"
+                  name="password"
+                  // onChange={onChange}
+                  // errorText={errors.password}
+                  // value={user.password}
+                />
+              </div>
+
+              <div className="button-line">
+                <button
+                  className="btn"
+                  type="submit"
+                  // disabled={!user.password || !user.email}
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+)
+          : 
+          console.log(false)}
+        
+
         <div className="">
           <button
             className="btn btn-warning mr-1"
-            onClick={props.changePass.bind(this)}
+            onClick={props.onChangePass.bind(this)}
           >
             Change Password
           </button>
