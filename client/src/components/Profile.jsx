@@ -25,41 +25,37 @@ const Profile = props => (
           </div>
         </div>
         {/* change pass state card */}
-        {props.chgPassState ? 
-       (
-        <div className="card" style={{ padding: "10px" }}>
-          {/* <h3 className="card-header"> Welcome back to TraveLlama </h3> */}
-          <div className="card-block">
-            <h2 className="card-header">Login</h2>
+        {props.chgPassState ? (
             <form
               action="/"
-              className="form-control"
+              className="form-group p-1 mb-2"
               //  onSubmit={onSubmit}
             >
               <div className="field-line">
                 <TextField
-                  floatingLabelText="Email"
-                  name="email"
+                  floatingLabelText="New Password"
+                  type="password"
+                  name="password"
                   // errorText={errors.email}
-                  // onChange={onChange}
+                  onChange={props.onChange.bind(this)}
                   // value={user.email}
                 />
               </div>
 
               <div className="field-line">
                 <TextField
-                  floatingLabelText="Password"
+                  floatingLabelText="Confirm Password"
                   type="password"
                   name="password"
-                  // onChange={onChange}
-                  // errorText={errors.password}
+                  onChange={props.confirmPass.bind(this)}
+                  errorText={props.err}
                   // value={user.password}
                 />
               </div>
 
               <div className="button-line">
                 <button
-                  className="btn"
+                  className="btn btn-primary"
                   type="submit"
                   // disabled={!user.password || !user.email}
                 >
@@ -67,13 +63,9 @@ const Profile = props => (
                 </button>
               </div>
             </form>
-          </div>
-        </div>
-)
-          : 
-          console.log(false)}
-        
-
+        ) : (
+          console.log(false)
+        )}
         <div className="">
           <button
             className="btn btn-warning mr-1"

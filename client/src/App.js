@@ -27,6 +27,7 @@ injectTapEventPlugin();
 const App = () => (
   <Router>
     <MuiThemeProvider>
+      <div>
     <NavBar />
       <div className="container">
         <Switch>
@@ -40,6 +41,7 @@ const App = () => (
         </Switch>
       </div>
       <Footer />
+      </div>
     </MuiThemeProvider>
   </Router>
 );

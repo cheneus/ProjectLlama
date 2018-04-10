@@ -11,6 +11,11 @@ class DashboardPage extends Component {
       userData: {},
       token: '',
       message: '',
+      err: '',
+      newInfo: {
+        password:'',
+        email: ''
+      },
       chgPassState:false
     };
 
@@ -39,6 +44,16 @@ class DashboardPage extends Component {
           console.log(err.message);
           this.setState({ token: "" });
         });
+    }
+
+    confirmPass = (event) => {
+      event.preventDefault()
+      if (this.state.newInfo.password !== event.target.value) {
+        this.setState({err:"Please Confirm Password" })
+      }
+      else {
+        this.setState({err:''})
+      }
     }
 
     getProfile = () => {
@@ -70,24 +85,19 @@ class DashboardPage extends Component {
       this.setState({token: ""})
     }
     
+    getNewInfo = (event) => {
+      event.preventDefault()
+      const field = event.target.name;
+      const newInfo = this.state.newInfo;
+      newInfo[field] = event.target.value;
+      console.log(event.target.value)
+      this.setState({
+        newInfo,
+      });
+    }
 
   componentWillMount() {
     this.setState({ token: localStorage.getItem('token') });
-    // const token = Auth.getToken();
-    // const config = {
-    //   headers: {
-    //     Authorization: `bearer ${Auth.getToken()}`,
-    //     'x-access-token': Auth.getToken(),
-    //   },
-    //   token,
-    // };
-    // console.log(this.state.userData);
-    // axios.get('/profile', config)
-    //   .then((res, req) => {
-    //     console.log(res);
-    //     this.setState({ userData: res.data.user });
-    //   })
-    //   .catch(err => console.log(err));
   }
   /**
    * This method will be executed after initial rendering.
@@ -105,7 +115,9 @@ class DashboardPage extends Component {
         {this.state.token === '' ? (
           <Redirect to="/login" />
     ) : (
-      <Profile userData={this.state.userData} onLogOut={this.deAuth} onChangePass={this.showChgPass} />
+      // maybe making a method would be better?
+      <Profile userData={this.state.userData} onLogOut={this.deAuth} onChangePass={this.showChgPass} chgPassState={this.state.chgPassState} onChange={this.getNewInfo} confirmPass={this.confirmPass}
+      err={this.state.err}/>
     )}
       </div>
 
