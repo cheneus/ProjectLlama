@@ -61,9 +61,10 @@ This app is built to be deployed into heroku, all configuration is setup to dete
 
 ## Authors
 
-* **Chen Sia** 
-* **Addison, Nicole** -- initial front-end
-* **Yaeinn** -- design of logo & Llamas
+* **Chen Sia** -- Backend + Auth & Profile component
+* **Addison** -- Result component after you completed the quiz
+* **Nicole** -- Quiz react component
+* **Yaeinn** -- Design the logo & Llamas, Idea contributor. 
 
 
 ## License
