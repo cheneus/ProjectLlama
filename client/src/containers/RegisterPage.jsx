@@ -75,7 +75,6 @@ class RegisterPage extends Component {
     axios
       .post("/auth/signup", { name, email, password })
       .then(res => {
-        console.log(res.data);
         this.setState({ message: res.data });
         localStorage.setItem("successMessage", res.data.message);
         if (res.data.success === true) {

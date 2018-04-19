@@ -67,7 +67,7 @@ router.get('/google/callback',
   },
 );
 
-// this route is just used to get the user basic info
+// this route is just used to get the user basic info -- testing purpose before JWT
 router.get('/user', (req, res, next) => {
   console.log('===== user!!======');
   console.log(req.user);

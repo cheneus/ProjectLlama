@@ -54,11 +54,11 @@ class LoginPage extends React.Component {
     // create an AJAX request
     axios.post('/auth/login', formData,
     ).then((res) => {
-      console.log(typeof res.data.token);
+
       const user = JSON.stringify(res.data.user);
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('usrname', user);
-      console.log(localStorage);
+
       this.setState({ token: res.data.token });
       this.setState({redirect: true})
     }).catch((err) => {

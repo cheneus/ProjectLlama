@@ -56,7 +56,7 @@ const Profile = props => (
               <div className="button-line">
                 <button
                   className="btn btn-primary"
-                  type="submit"
+                  onClick={}
                   // disabled={!user.password || !user.email}
                 >
                   Submit

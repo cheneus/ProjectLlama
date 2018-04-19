@@ -19,12 +19,14 @@ class DashboardPage extends Component {
       chgPassState:false
     };
 
-    showChgPass = () => {
+    showChgPass = (event) => {
+      event.preventDefault()
       this.setState({chgPassState: !this.state.chgPassState})
       console.log(this.state.chgPassState)
     }
   
-    changePass = () => {
+    changePass = (event) => {
+      event.preventDefault()
       const token = Auth.getToken();
       const config = {
         headers: {

@@ -43,7 +43,7 @@ const LoginForm = ({
         </div>
 
         <div className="button-line">
-          <button className="btn" type="submit" disabled={!user.password || !user.email}>
+          <button className="btn btn-success" type="submit" disabled={!user.password || !user.email}>
              Login
           </button>
         </div>

@@ -10,7 +10,6 @@ exports.verifyUser =  (req, res, next) =>{
   }
   const token =
     req.body.token || req.query.token || req.headers['x-access-token'];
-  console.log(token);
   // decode token
   if (token) {
     // verifies secret and checks exp
@@ -23,7 +22,6 @@ exports.verifyUser =  (req, res, next) =>{
       }
       // if everything is good, save to request for use in other routes
       req.decoded = decoded;
-      console.log(req.decoded);
       console.log(decoded);
       User.findById(req.decoded.sub, (userErr, user) => {
           if (userErr || !user) {
