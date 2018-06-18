@@ -4,6 +4,7 @@ The initial project done by my group on https://github.com/cheneus/ProjectRed
 Since then, I have implemented my own improvement and changes to make the site better.
 You can see the live version here : https://projectllama.herokuapp.com/
 
+
 For production, please refer to the prodheroku branch: 
 Master is strictly for dev, and on-going testing for different method of coding in React.
 
@@ -66,6 +67,9 @@ This app is built to be deployed into heroku, all configuration is setup to dete
 * **Nicole** -- Quiz react component
 * **Yaeinn** -- Design the logo & Llamas, Idea contributor. 
 
+## Update prototypes
+
+https://cheneus.github.io/Llama-proto/ --> html/css UI prep. 
 
 ## License
 
